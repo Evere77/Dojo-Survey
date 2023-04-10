@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+  <title>Document</title>
+</head>
+<html>
+  <h1>Submitted Info</h1>
+  <body class="container bg-secondary text-white">
+    <h3>{{session['name']}}</h3>
+    <table>
+    <tbody>
+      <tr>
+        <th>Dojo Location:</th><td class="text-danger font-weight-bold">{{session['location']}}</td></tr>
+      <tr><th>Favorite Language:</th><td class="text-danger font-weight-bold">{{session['language']}}</td></tr>
+      <tr><th>Comment:</th><td class="text-danger font-weight-bold">{{session['comment']}}</td></tr>
+    </tbody>
+    </table>
+    <form action="/" method='GET'>
+      <button type="submit" class="btn btn-danger">Home</button>
+    </form>
+  </body>
+</html>
